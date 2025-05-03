@@ -26,13 +26,13 @@ header {
     padding: 40px 20px;
     text-align: center;
 }
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  width: 60px;
-  height: 60px;
+.whatsapp-button img {
+  width: 32px; /* Increase size */
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 }
 
 .whatsapp-button img {
