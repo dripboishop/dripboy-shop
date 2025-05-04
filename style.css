@@ -1,55 +1,85 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
-  color: #fff;
+    background-color: #0d0d0d;
+    color: #f0c040;
+    line-height: 1.6;
 }
-header.hero {
-  background: black;
-  color: gold;
-  text-align: center;
-  padding: 4rem 1rem;
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
 }
+
+.hero {
+    background-color: #000;
+    padding: 4rem 0;
+    text-align: center;
+}
+
 .logo {
-  max-width: 120px;
-  margin-bottom: 1rem;
+    max-width: 150px;
+    margin-bottom: 1rem;
 }
-.hero-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: 2px solid #f0c040;
+    color: #f0c040;
+    text-decoration: none;
+    font-weight: bold;
 }
-.whatsapp-button {
-  background-color: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
+
+.about, .collection {
+    background-color: #111;
+    margin-top: 2rem;
+    padding: 3rem 0;
 }
-.whatsapp-button:hover {
-  background-color: #1ebe57;
+
+.collection ul {
+    list-style: none;
+    padding: 0;
 }
-main {
-  padding: 2rem 1rem;
+
+.collection li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
 }
-section.intro, section.products {
-  max-width: 1000px;
-  margin: 0 auto;
+
+.order {
+    margin: 3rem 0;
 }
-.category {
-  margin-bottom: 2rem;
+
+.btn-whatsapp {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
-.product-card {
-  background: #222;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-top: 0.5rem;
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
 }
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #000;
-  color: #aaa;
-  font-size: 0.9rem;
+
+.footer .socials a {
+    color: #f0c040;
+    margin: 0 0.5rem;
+    text-decoration: none;
 }
