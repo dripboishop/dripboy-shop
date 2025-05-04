@@ -1,85 +1,66 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
 body {
-    background-color: #0d0d0d;
-    color: #f0c040;
-    line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: gold;
 }
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2rem 0;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
 }
-
-.hero {
-    background-color: #000;
-    padding: 4rem 0;
-    text-align: center;
-}
-
 .logo {
-    max-width: 150px;
-    margin-bottom: 1rem;
+  height: 50px;
 }
-
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: gold;
+  text-decoration: none;
+}
+.search-bar input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: url('assets/images/hero.jpg') no-repeat center center/cover;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-    border: 2px solid #f0c040;
-    color: #f0c040;
-    text-decoration: none;
-    font-weight: bold;
+  padding: 1rem 2rem;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
 }
-
-.about, .collection {
-    background-color: #111;
-    margin-top: 2rem;
-    padding: 3rem 0;
+.whatsapp-order {
+  text-align: center;
+  margin: 2rem 0;
 }
-
-.collection ul {
-    list-style: none;
-    padding: 0;
+.whatsapp-icon {
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
-
-.collection li {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
 }
-
-.order {
-    margin: 3rem 0;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #25d366;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-}
-
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.footer .socials a {
-    color: #f0c040;
-    margin: 0 0.5rem;
-    text-decoration: none;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
