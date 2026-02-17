@@ -1,4 +1,3 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/script.js b/script.js
 new file mode 100644
 index 0000000000000000000000000000000000000000..8eed725e9f69c7d9c4e318b3e2cc5cc7f5f22b71
@@ -50,6 +49,3 @@ index 0000000000000000000000000000000000000000..8eed725e9f69c7d9c4e318b3e2cc5cc7
 +    trackingResult.textContent = `${orderNumber}: ${mockStatuses[index]}`;
 +  });
 +}
- 
-EOF
-)
