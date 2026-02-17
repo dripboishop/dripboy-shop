@@ -1,55 +1,336 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DripBoy</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="hero">
-        <div class="container">
-            <img src="logo.png" alt="DripBoy Logo" class="logo">
-            <h1>NEW DROPS WEEKLY</h1>
-            <a href="products.html" class="btn">SHOP NOW</a>
-        </div>
-    </header>
-
-    <section class="about" id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>DripBoy is an online streetwear store bringing you the hottest urban fashion from top brands like Nike, Adidas, Puma, and Jordan. We’re all about bold style, premium quality, and affordable prices — delivered straight to your door. Whether you're stepping out or standing out, DripBoy has the drip to match your vibe.</p>
-        </div>
-    </section>
-
-    <section class="collection" id="collection">
-        <div class="container">
-            <h2>Our Collection</h2>
-            <ul>
-                <li>Sneakers & Sandals</li>
-                <li>Jeans & Short Pants</li>
-                <li>Golf T-Shirts & Urban T-Shirts</li>
-                <li>Caps & Hats</li>
-                <li>Side Bags, School Bags, Travel Bags</li>
-                <li>Hoodies & Socks</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="order">
-        <a href="https://wa.me/27714830738" class="btn-whatsapp">ORDER ON WHATSAPP</a>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Contact Us: 071 483 0738 | 064 739 6713</p>
-            <p>Email: dripboy.clothing@gmail.com</p>
-            <div class="socials">
-                <a href="https://instagram.com/dripboy__shop">Instagram</a> |
-                <a href="https://facebook.com/DripBoy Shop">Facebook</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+diff --git a/index.html b/index.html
+index 0e6940541de177281a0737ec0f653df2c5e7519d..5b7ec85f4607800993963696a2da351df72830dd 100644
+--- a/index.html
++++ b/index.html
+@@ -1,55 +1,292 @@
+-
+ <!DOCTYPE html>
+ <html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>DripBoy</title>
+-    <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-    <header class="hero">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <meta
++      name="description"
++      content="DripBoy Shop - Luxury streetwear boutique with premium black and gold style."
++    />
++    <title>DripBoy Shop | Luxury Streetwear</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="style.css" />
++  </head>
++  <body>
++    <!-- Sticky Navigation -->
++    <header class="site-header" id="home">
++      <nav class="navbar container" aria-label="Main navigation">
++        <a href="#home" class="logo" aria-label="DripBoy home">
++          <img src="logo.png" alt="DripBoy logo" class="logo-image" />
++        </a>
++
++        <button
++          class="menu-toggle"
++          aria-label="Toggle menu"
++          aria-expanded="false"
++          aria-controls="nav-menu"
++        >
++          <span></span>
++          <span></span>
++          <span></span>
++        </button>
++
++        <ul class="nav-links" id="nav-menu">
++          <li><a href="#home">Home</a></li>
++          <li><a href="#shop">Shop</a></li>
++          <li><a href="#combos">Combos</a></li>
++          <li><a href="#testimonials">Testimonials</a></li>
++          <li><a href="#track-order">Track Order</a></li>
++          <li><a href="#contact">Contact</a></li>
++        </ul>
++      </nav>
++    </header>
++
++    <main>
++      <!-- Hero Section -->
++      <section class="hero section-padding">
++        <div class="hero-content container">
++          <p class="hero-kicker">Luxury Streetwear Boutique</p>
++          <h1>DRIPBOY SHOP</h1>
++          <p class="hero-subheading">Elevate Your Drip</p>
++          <a href="#shop" class="btn btn-primary">Shop Now</a>
++        </div>
++      </section>
++
++      <!-- Products Section -->
++      <section class="products section-padding" id="shop">
+         <div class="container">
+-            <img src="logo.png" alt="DripBoy Logo" class="logo">
+-            <h1>NEW DROPS WEEKLY</h1>
+-            <a href="products.html" class="btn">SHOP NOW</a>
++          <h2 class="section-title">Featured Products</h2>
++          <p class="section-intro">
++            Signature pieces designed for bold presence and premium comfort.
++          </p>
++
++          <div class="product-grid" id="product-grid">
++            <!-- Product card template repeated for easy scaling -->
++            <article class="product-card">
++              <div class="product-image" aria-label="Classic gold logo hoodie image placeholder">
++                Image
++              </div>
++              <h3>Classic Gold Logo Hoodie</h3>
++              <p class="price">R899</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++
++            <article class="product-card">
++              <div class="product-image" aria-label="Midnight cargo set image placeholder">Image</div>
++              <h3>Midnight Cargo Set</h3>
++              <p class="price">R1,199</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++
++            <article class="product-card">
++              <div class="product-image" aria-label="Signature street tee image placeholder">Image</div>
++              <h3>Signature Street Tee</h3>
++              <p class="price">R499</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++
++            <article class="product-card">
++              <div class="product-image" aria-label="Luxury varsity jacket image placeholder">Image</div>
++              <h3>Luxury Varsity Jacket</h3>
++              <p class="price">R1,499</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++          </div>
+         </div>
+-    </header>
++      </section>
+ 
+-    <section class="about" id="about">
++      <!-- Combo Deals -->
++      <section class="combos section-padding" id="combos">
+         <div class="container">
+-            <h2>About Us</h2>
+-            <p>DripBoy is an online streetwear store bringing you the hottest urban fashion from top brands like Nike, Adidas, Puma, and Jordan. We’re all about bold style, premium quality, and affordable prices — delivered straight to your door. Whether you're stepping out or standing out, DripBoy has the drip to match your vibe.</p>
++          <h2 class="section-title">Combo Deals</h2>
++          <div class="combo-grid">
++            <article class="combo-card">
++              <h3>Urban Starter Combo</h3>
++              <p class="price">R1,299</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++
++            <article class="combo-card">
++              <h3>Weekend Flex Combo</h3>
++              <p class="price">R1,699</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++
++            <article class="combo-card">
++              <h3>Luxury Night Out Combo</h3>
++              <p class="price">R2,099</p>
++              <label>
++                Size
++                <select>
++                  <option>S</option>
++                  <option>M</option>
++                  <option>L</option>
++                  <option>XL</option>
++                </select>
++              </label>
++              <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">
++                Order on WhatsApp
++              </a>
++            </article>
++          </div>
+         </div>
+-    </section>
++      </section>
+ 
+-    <section class="collection" id="collection">
++      <!-- Testimonials -->
++      <section class="testimonials section-padding" id="testimonials">
+         <div class="container">
+-            <h2>Our Collection</h2>
+-            <ul>
+-                <li>Sneakers & Sandals</li>
+-                <li>Jeans & Short Pants</li>
+-                <li>Golf T-Shirts & Urban T-Shirts</li>
+-                <li>Caps & Hats</li>
+-                <li>Side Bags, School Bags, Travel Bags</li>
+-                <li>Hoodies & Socks</li>
+-            </ul>
++          <h2 class="section-title">What Customers Say</h2>
++          <div class="testimonial-grid">
++            <article class="testimonial-card">
++              <p class="stars" aria-label="5 star rating">★★★★★</p>
++              <p>“Top quality and fast delivery. The fit is clean and premium every time.”</p>
++              <h3>— Sizwe M.</h3>
++            </article>
++            <article class="testimonial-card">
++              <p class="stars" aria-label="5 star rating">★★★★★</p>
++              <p>“DripBoy really changed my wardrobe. The combos are worth every cent.”</p>
++              <h3>— Kabelo R.</h3>
++            </article>
++            <article class="testimonial-card">
++              <p class="stars" aria-label="5 star rating">★★★★★</p>
++              <p>“Luxury vibe, perfect packaging, and customer service is excellent.”</p>
++              <h3>— Thabo N.</h3>
++            </article>
++          </div>
+         </div>
+-    </section>
++      </section>
+ 
+-    <section class="order">
+-        <a href="https://wa.me/27714830738" class="btn-whatsapp">ORDER ON WHATSAPP</a>
+-    </section>
++      <!-- Order Tracking -->
++      <section class="tracking section-padding" id="track-order">
++        <div class="container tracking-box">
++          <h2 class="section-title">Track Your Order</h2>
++          <p>Enter your order number below to view the latest status.</p>
++          <form id="tracking-form" class="tracking-form">
++            <label for="order-number" class="visually-hidden">Order Number</label>
++            <input
++              type="text"
++              id="order-number"
++              placeholder="Example: DB1024"
++              required
++            />
++            <button type="submit" class="btn btn-primary">Track Order</button>
++          </form>
++          <p id="tracking-result" class="tracking-result" aria-live="polite"></p>
++        </div>
++      </section>
+ 
+-    <footer class="footer">
++      <!-- About -->
++      <section class="about section-padding" id="about">
++        <div class="container about-content fade-in-section">
++          <h2 class="section-title">About DripBoy</h2>
++          <p class="about-text">
++            DripBoy is an online streetwear store bringing you the hottest urban fashion from top
++            brands like Nike, Adidas, Puma, and Jordan.
++          </p>
++          <p class="about-text">
++            We are all about bold style, premium quality, and affordable prices — because looking
++            good should never break the bank.
++          </p>
++          <p class="about-text">
++            Delivered straight to your door, DripBoy makes it easy to stay fresh wherever you are.
++          </p>
++          <p class="about-text">
++            Whether you're stepping out or standing out, DripBoy has the drip to match your vibe.
++          </p>
++        </div>
++      </section>
++
++      <!-- Contact -->
++      <section class="contact section-padding" id="contact">
+         <div class="container">
+-            <p>Contact Us: 071 483 0738 | 064 739 6713</p>
+-            <p>Email: dripboy.clothing@gmail.com</p>
+-            <div class="socials">
+-                <a href="https://instagram.com/dripboy__shop">Instagram</a> |
+-                <a href="https://facebook.com/DripBoy Shop">Facebook</a>
+-            </div>
++          <h2 class="section-title">Contact</h2>
++          <div class="contact-links">
++            <a class="btn btn-whatsapp" href="https://wa.me/27XXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
++            <a class="contact-link" href="https://instagram.com/your_instagram_handle" target="_blank" rel="noopener noreferrer">Instagram</a>
++            <a class="contact-link" href="mailto:hello@dripboyshop.com">hello@dripboyshop.com</a>
++          </div>
+         </div>
++      </section>
++    </main>
++
++    <footer class="site-footer">
++      <div class="container">
++        <p>Card payment coming soon.</p>
++        <p>© 2026 DripBoy Shop</p>
++      </div>
+     </footer>
+-</body>
++
++    <script src="script.js"></script>
++  </body>
+ </html>
