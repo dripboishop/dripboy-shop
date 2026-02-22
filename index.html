@@ -39,13 +39,9 @@
         <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#new-arrivals">New Arrivals</a></li>
-          <li><a href="#footwear">Footwear</a></li>
+          <li><a href="#sneakers">Sneakers</a></li>
           <li><a href="#apparel">Apparel</a></li>
-          <li><a href="#psl-heritage">PSL Heritage</a></li>
-          <li><a href="#international-jerseys">International Jerseys</a></li>
-          <li><a href="#tracksuits">Tracksuits</a></li>
-          <li><a href="#accessories">Accessories</a></li>
-          <li><a href="#bags">Bags</a></li>
+          <li><a href="#combos">Combos</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -61,7 +57,7 @@
             Sneakers, apparel, and accessories inspired by global urban culture.
             Premium feel. Affordable prices. Real drip.
           </p>
-          <a href="#new-arrivals" class="btn btn-primary">Shop Now</a>
+          <a href="#products" class="btn btn-primary">Shop Now</a>
         </div>
       </section>
 
@@ -69,48 +65,18 @@
         <div class="container">
           <div class="section-heading fade-in">
             <h2>Shop the Collection</h2>
-            <p>Tap a product card to select options and order on WhatsApp.</p>
+            <p>Browse our latest drops and WhatsApp us directly to order.</p>
           </div>
 
-          <div class="section-heading fade-in" id="new-arrivals">
-            <h2>New Arrivals</h2>
+          <div class="category-tabs fade-in" aria-label="Product filters">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="New Arrivals" id="new-arrivals">New Arrivals</button>
+            <button class="tab-btn" data-filter="Sneakers" id="sneakers">Sneakers</button>
+            <button class="tab-btn" data-filter="Apparel" id="apparel">Apparel</button>
+            <button class="tab-btn" data-filter="Combos" id="combos">Combos</button>
           </div>
-          <div class="product-grid" data-section-grid="New Arrivals"></div>
 
-          <div class="section-heading fade-in" id="footwear">
-            <h2>Footwear</h2>
-          </div>
-          <div class="product-grid" data-section-grid="Footwear"></div>
-
-          <div class="section-heading fade-in" id="apparel">
-            <h2>Apparel</h2>
-          </div>
-          <div class="product-grid" data-section-grid="Apparel"></div>
-
-          <div class="section-heading fade-in" id="psl-heritage">
-            <h2>PSL Heritage</h2>
-          </div>
-          <div class="product-grid" data-section-grid="PSL Heritage"></div>
-
-          <div class="section-heading fade-in" id="international-jerseys">
-            <h2>International Jerseys</h2>
-          </div>
-          <div class="product-grid" data-section-grid="International Jerseys"></div>
-
-          <div class="section-heading fade-in" id="tracksuits">
-            <h2>Tracksuits</h2>
-          </div>
-          <div class="product-grid" data-section-grid="Tracksuits"></div>
-
-          <div class="section-heading fade-in" id="accessories">
-            <h2>Accessories</h2>
-          </div>
-          <div class="product-grid" data-section-grid="Accessories"></div>
-
-          <div class="section-heading fade-in" id="bags">
-            <h2>Bags</h2>
-          </div>
-          <div class="product-grid" data-section-grid="Bags"></div>
+          <div class="product-grid" id="product-grid"></div>
         </div>
       </section>
 
