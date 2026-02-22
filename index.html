@@ -142,6 +142,32 @@
       <p class="copyright">© <span id="year"></span> DripBoy Shop. All rights reserved.</p>
     </footer>
 
+    <div class="modal" id="order-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button class="modal-close" id="modal-close" aria-label="Close order options">×</button>
+        <h3 id="modal-title">Order Product</h3>
+        <p class="modal-product" id="modal-product-name"></p>
+
+        <label class="modal-field" id="size-field">
+          Size
+          <select id="modal-size"></select>
+        </label>
+
+        <label class="modal-field" id="color-field">
+          Color
+          <select id="modal-color"></select>
+        </label>
+
+        <label class="modal-field">
+          Quantity
+          <input type="number" id="modal-quantity" min="1" value="1" />
+        </label>
+
+        <button class="btn btn-whatsapp modal-order-btn" id="modal-order-btn">Order on WhatsApp</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
