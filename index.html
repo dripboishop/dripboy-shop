@@ -5,153 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DRIPBOY CLOTHING — Luxury dark-themed streetwear store with footwear, reflector sets, jerseys, bags, and essential drip."
+      content="DRIPBOY SHOP premium streetwear store for sneakers, apparel, football jerseys, watches, wallets, and curated combos."
     />
-    <title>DRIPBOY CLOTHING | Trusted Plug</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              matte: '#050505',
-              gold: '#c5a059',
-              panel: '#101010'
-            },
-            boxShadow: {
-              glow: '0 0 12px rgba(197,160,89,0.45), 0 0 28px rgba(197,160,89,0.25)',
-              reflector: '0 0 16px rgba(148,163,184,0.6), 0 0 30px rgba(255,255,255,0.25)'
-            }
-          }
-        }
-      };
-    </script>
+    <title>DRIPBOY SHOP | Luxury Streetwear</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-matte text-white font-[Inter]">
-    <header class="fixed inset-x-0 top-0 z-50 border-b border-gold/30 bg-black/80 backdrop-blur">
-      <nav class="mx-auto flex w-[92%] max-w-7xl items-center justify-between py-4">
-        <a href="#home" class="flex items-center gap-3 text-sm font-extrabold tracking-[0.2em] text-gold sm:text-base">
-          <img src="assets/dripboy-logo.svg" alt="DripBoy logo" class="h-10 w-10 rounded-full border border-gold/60 bg-black/70 p-1 object-contain" />
-          DRIPBOY CLOTHING
+  <body>
+    <header class="site-header" id="home">
+      <nav class="container navbar">
+        <a href="#home" class="brand" aria-label="DripBoy Shop home">
+          <span class="brand-text">DripBoy Shop</span>
         </a>
-        <a href="#catalog" class="rounded-full border border-gold/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold transition hover:bg-gold hover:text-black">Shop Drop</a>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#winter-drip">Winter Drip</a></li>
+          <li><a href="#international-fan-zone">International Fan Zone</a></li>
+          <li><a href="#psl-heritage">PSL Heritage</a></li>
+          <li><a href="#footwear-heat">Footwear Heat</a></li>
+          <li><a href="#the-vault">The Vault</a></li>
+          <li><a href="#kids-extreme-drip">Kids Extreme Drip</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main id="home" class="pt-20">
-      <section class="relative min-h-[92vh] overflow-hidden">
-        <div id="hero-sequence" class="hero-sequence"></div>
-        <div class="absolute inset-0 bg-black/55"></div>
-        <div class="relative mx-auto flex w-[92%] max-w-7xl min-h-[92vh] items-end py-12 sm:items-center">
-          <div class="max-w-3xl">
-            <div class="mb-6 inline-flex max-w-[260px] rounded-2xl border border-gold/40 bg-black/55 p-4 shadow-glow">
-              <img src="assets/dripboy-logo.svg" alt="DripBoy original inspired logo" class="w-full object-contain" />
-            </div>
-            <p class="mb-4 inline-flex items-center gap-3 rounded-full border border-gold/60 bg-black/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-gold shadow-glow">
-              Street Style Photography • Live Urban Energy
-            </p>
-            <h1 class="text-4xl font-black leading-tight sm:text-6xl">
-              Luxury Streetwear for the
-              <span class="text-gold">Real Drip Culture</span>
-            </h1>
-            <p class="mt-5 max-w-2xl text-sm text-white/85 sm:text-lg">
-              Curated Nike Tech, Reflector heat, G-Star Raw, premium footwear, jerseys, bags and accessories — delivered with trusted plug service.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#catalog" class="rounded-md bg-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-black transition hover:scale-[1.02] hover:shadow-glow">Explore Inventory</a>
-              <a href="https://wa.me/27696643402" target="_blank" rel="noopener noreferrer" class="rounded-md border border-white/40 px-6 py-3 text-sm font-bold uppercase tracking-[0.15em] transition hover:border-gold hover:text-gold">WhatsApp Concierge</a>
-            </div>
-            <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/85">
-              <p><span class="font-semibold text-gold">WhatsApp:</span> 0696643402</p>
-              <p><span class="font-semibold text-gold">Email:</span> dripboy.clothing@gmail.com</p>
-            </div>
-          </div>
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>STEP INTO REAL DRIP</h1>
+          <p>Premium Sneakers • Jerseys • Streetwear • Accessories</p>
+          <a href="#winter-drip" class="btn btn-gold">SHOP NOW</a>
         </div>
       </section>
 
-      <section id="catalog" class="mx-auto w-[92%] max-w-7xl py-16">
-        <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">The Complete Inventory</p>
-            <h2 class="text-3xl font-black sm:text-4xl">The Drip Selection</h2>
-          </div>
-          <p class="max-w-xl text-sm text-white/70">Hover a product card to flip from item shot to styled fit image. Select your colorway and size, then order instantly on WhatsApp.</p>
-        </div>
-
-        <div class="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          <article class="rounded-xl border border-gold/30 bg-panel p-4">
-            <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-gold">Footwear Vault</h3>
-            <p class="mt-2 text-sm text-white/75">Jordan 4s, Yeezys, Diesel Sneakers, and premium sandals/slides.</p>
-          </article>
-          <article class="rounded-xl border border-gold/30 bg-panel p-4">
-            <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-gold">Luxury Apparel</h3>
-            <p class="mt-2 text-sm text-white/75">Lacoste shirts, G-Star jackets/denim and Nike Reflector sets.</p>
-          </article>
-          <article class="rounded-xl border border-gold/30 bg-panel p-4">
-            <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-gold">Soccer Heritage</h3>
-            <p class="mt-2 text-sm text-white/75">PSL and international fanwear jerseys.</p>
-          </article>
-          <article class="rounded-xl border border-gold/30 bg-panel p-4">
-            <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-gold">Bags & Luggage</h3>
-            <p class="mt-2 text-sm text-white/75">Urban Travel + School Essentials in one clean section.</p>
-          </article>
-          <article class="rounded-xl border border-gold/30 bg-panel p-4">
-            <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-gold">Essential Drip</h3>
-            <p class="mt-2 text-sm text-white/75">Premium socks, reflector gloves, wallets and watches.</p>
-          </article>
-        </div>
-
-        <div id="product-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      <section class="section-head container">
+        <h2>Premium Collections</h2>
+        <p>
+          Handpicked essentials for your full fit. Select image, color, size, and place your order directly on WhatsApp.
+        </p>
       </section>
 
-      <section class="mx-auto w-[92%] max-w-7xl pb-16">
-        <div class="grid gap-6 rounded-2xl border border-gold/30 bg-panel/70 p-6 lg:grid-cols-2">
+      <div id="product-sections" class="container"></div>
+
+      <section id="contact" class="contact">
+        <div class="container contact-grid">
           <div>
-            <h3 class="text-xl font-black text-gold">Bags & Luggage</h3>
-            <p class="mt-2 text-sm text-white/75">Two dedicated channels to keep your movement clean and organized.</p>
+            <h2>Contact DRIPBOY SHOP</h2>
+            <p>Need help with sizing, stock, or bundle deals? Chat with us instantly.</p>
+            <div class="contact-actions">
+              <a href="https://wa.me/27696643402" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+                WhatsApp Us
+              </a>
+              <a href="https://wa.me/c/27696643402" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                View WhatsApp Catalog
+              </a>
+            </div>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <article class="rounded-xl border border-white/10 bg-black/40 p-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Urban Travel</p>
-              <ul class="mt-3 space-y-2 text-sm text-white/80">
-                <li>• Nike Duffel Bags</li>
-                <li>• Weekend Travel Backpacks</li>
-                <li>• Cabin-ready utility sets</li>
-              </ul>
-            </article>
-            <article class="rounded-xl border border-white/10 bg-black/40 p-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">School Essentials</p>
-              <ul class="mt-3 space-y-2 text-sm text-white/80">
-                <li>• Designer school bags</li>
-                <li>• Reinforced laptop compartments</li>
-                <li>• Daily commute carry options</li>
-              </ul>
-            </article>
+          <div class="contact-card">
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 09:00 - 18:00</p>
+            <p>Saturday: 09:00 - 15:00</p>
+            <p>Sunday: Closed</p>
+            <p class="soon">Card payments coming soon.</p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-gold/30 bg-black/90">
-      <div class="mx-auto grid w-[92%] max-w-7xl gap-6 py-8 sm:grid-cols-3">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold">DRIPBOY CLOTHING</p>
-          <p class="mt-2 text-sm text-white/70">Dark luxury streetwear curated for the culture.</p>
-        </div>
-        <div>
-          <p class="text-sm"><span class="text-gold">WhatsApp:</span> 0696643402</p>
-          <p class="mt-1 text-sm"><span class="text-gold">Email:</span> dripboy.clothing@gmail.com</p>
-        </div>
-        <div class="sm:text-right">
-          <span class="inline-flex items-center gap-2 rounded-full border border-gold/60 bg-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.15em] text-gold shadow-glow">✔ Trusted Plug</span>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 DripBoy Shop</p>
       </div>
     </footer>
 
