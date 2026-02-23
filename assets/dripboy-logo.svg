@@ -1,0 +1,20 @@
+<svg width="560" height="560" viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">DripBoy Logo</title>
+  <desc id="desc">Gold dripping sneaker icon with DripBoy text</desc>
+  <g stroke="#C5A059" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 210L155 145H280L335 185L440 210L462 245L452 270L140 270L118 248L120 210Z"/>
+    <path d="M186 145L215 115H308L333 132"/>
+    <path d="M336 184L360 152"/>
+    <path d="M376 194L398 167"/>
+    <path d="M414 204L432 181"/>
+    <path d="M171 270V308"/>
+    <path d="M224 270V324"/>
+    <path d="M278 270V308"/>
+    <path d="M332 270V321"/>
+    <path d="M386 270V309"/>
+    <path d="M442 270V332"/>
+    <path d="M142 241H450"/>
+  </g>
+  <text x="280" y="430" text-anchor="middle" fill="#C5A059" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="900" letter-spacing="3">DRIPBOY</text>
+  <text x="280" y="478" text-anchor="middle" fill="#C5A059" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="2">STEP OUTSIDE WITH CONFIDENCE</text>
+</svg>
