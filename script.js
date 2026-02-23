@@ -1,196 +1,128 @@
 const WHATSAPP_NUMBER = '27696643402';
+const productImage = (query, variant) => {
+  const tags = query
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ',')
+    .replace(/^,+|,+$/g, '');
 
-const heroFrames = [
-  'https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1800&q=80',
-  'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1800&q=80',
-  'https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=1800&q=80',
-  'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1800&q=80'
-];
+  return `https://loremflickr.com/900/700/${tags}?lock=${variant}`;
+};
+
+const categoryOrder = ['Sneakers', 'Apparel', 'Football Jerseys', 'Watches', 'Wallets', 'Combos'];
+
+const sectionIds = {
+  Sneakers: 'sneakers',
+  Apparel: 'apparel',
+  'Football Jerseys': 'football-jerseys',
+  Watches: 'watches',
+  Wallets: 'wallets',
+  Combos: 'combos'
+};
 
 const products = [
-  {
-    name: 'Jordan 4 Retro Metallic',
-    department: 'Footwear Vault',
-    itemImage: 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1463100099107-aa0980c362e6?auto=format&fit=crop&w=900&q=80',
-    price: 'R3,499',
-    sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
-    colors: ['Metallic', 'Black', 'Reflective']
-  },
-  {
-    name: 'Yeezy Street Runner',
-    department: 'Footwear Vault',
-    itemImage: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=900&q=80',
-    price: 'R3,199',
-    sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
-    colors: ['Black', 'Stone', 'Reflective']
-  },
-  {
-    name: 'Diesel Shadow Sneaker',
-    department: 'Footwear Vault',
-    itemImage: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=900&q=80',
-    price: 'R2,899',
-    sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
-    colors: ['Black', 'Metallic', 'Grey']
-  },
-  {
-    name: 'Lacoste Gold Crest Polo',
-    department: 'Luxury Apparel',
-    itemImage: 'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=80',
-    price: 'R1,099',
-    sizes: ['UK S', 'UK M', 'UK L', 'UK XL'],
-    colors: ['Black', 'White', 'Gold Trim']
-  },
-  {
-    name: 'G-Star Raw Denim Armor',
-    department: 'Luxury Apparel',
-    itemImage: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1529903384028-929ae5dccdf1?auto=format&fit=crop&w=900&q=80',
-    price: 'R2,299',
-    sizes: ['UK S', 'UK M', 'UK L', 'UK XL'],
-    colors: ['Indigo', 'Black', 'Raw Wash']
-  },
-  {
-    name: 'Nike Reflector Full Set',
-    department: 'Luxury Apparel',
-    itemImage: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80',
-    price: 'R2,999',
-    sizes: ['UK S', 'UK M', 'UK L', 'UK XL'],
-    colors: ['Reflective', 'Black', 'Silver']
-  },
-  {
-    name: 'PSL Matchday Jersey',
-    department: 'Soccer Heritage',
-    itemImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1543351611-58f69d95a5ca?auto=format&fit=crop&w=900&q=80',
-    price: 'R899',
-    sizes: ['UK S', 'UK M', 'UK L', 'UK XL'],
-    colors: ['Home', 'Away', 'Blackout']
-  },
-  {
-    name: 'International Fanwear Jersey',
-    department: 'Soccer Heritage',
-    itemImage: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=900&q=80',
-    price: 'R999',
-    sizes: ['UK S', 'UK M', 'UK L', 'UK XL'],
-    colors: ['Classic', 'Limited Gold', 'Black']
-  },
-  {
-    name: 'Nike Urban Travel Duffel',
-    department: 'Bags & Luggage · Urban Travel',
-    itemImage: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80',
-    price: 'R1,299',
-    sizes: ['Standard'],
-    colors: ['Black', 'Reflective', 'Metallic']
-  },
-  {
-    name: 'Designer School Utility Bag',
-    department: 'Bags & Luggage · School Essentials',
-    itemImage: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80',
-    price: 'R1,199',
-    sizes: ['Standard'],
-    colors: ['Black', 'Grey', 'Reflective']
-  },
-  {
-    name: 'Reflector Grip Gloves',
-    department: 'Essential Drip',
-    itemImage: 'https://images.unsplash.com/photo-1575383598941-ee7d1ec37f53?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
-    price: 'R499',
-    sizes: ['UK S', 'UK M', 'UK L'],
-    colors: ['Reflective', 'Black', 'Metallic']
-  },
-  {
-    name: 'Executive Drip Watch Set',
-    department: 'Essential Drip',
-    itemImage: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=900&q=80',
-    styledImage: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=900&q=80',
-    price: 'R1,499',
-    sizes: ['Standard'],
-    colors: ['Gold', 'Black', 'Metallic']
-  }
+  { name: 'Jordan 4 Retro', category: 'Sneakers', colors: ['Black/Gold', 'White/Gray', 'Red/Black'], sizes: ['6', '7', '8', '9', '10', '11'], images: [productImage('jordan 4 retro sneaker shoe', 11), productImage('Air Jordan sneaker side profile', 12)] },
+  { name: 'Jordan 6', category: 'Sneakers', colors: ['Infrared', 'Midnight Navy', 'All Black'], sizes: ['6', '7', '8', '9', '10', '11'], images: [productImage('jordan 6 sneaker shoe', 13), productImage('Nike Jordan 6 shoes', 14)] },
+  { name: 'Nike Air Force', category: 'Sneakers', colors: ['Triple White', 'Black', 'Sail'], sizes: ['6', '7', '8', '9', '10', '11'], images: [productImage('nike air force 1 sneaker shoe', 15), productImage('Air Force 1 shoes', 16)] },
+  { name: 'Adidas Campus', category: 'Sneakers', colors: ['Green', 'Gray', 'Black'], sizes: ['6', '7', '8', '9', '10', '11'], images: [productImage('adidas campus sneaker shoe', 17), productImage('Adidas campus shoes', 18)] },
+
+  { name: 'Nike T-Shirts', category: 'Apparel', colors: ['White', 'Black', 'Navy'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('nike t shirt apparel', 19), productImage('Nike tee streetwear', 20)] },
+  { name: 'Puma T-Shirts', category: 'Apparel', colors: ['Black', 'Gray', 'Burgundy'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('puma t shirt apparel', 21), productImage('Puma clothing t-shirt', 22)] },
+  { name: 'G-Star Raw T-Shirts', category: 'Apparel', colors: ['Olive', 'White', 'Black'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('g star raw t shirt apparel', 23), productImage('G-Star Raw clothing', 24)] },
+
+  { name: 'Real Madrid', category: 'Football Jerseys', subcategory: 'International', colors: ['Home White', 'Away Black'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('real madrid football jersey shirt', 25), productImage('Real Madrid football shirt', 26)] },
+  { name: 'Barcelona', category: 'Football Jerseys', subcategory: 'International', colors: ['Blue/Red', 'Gold Away'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('barcelona football jersey shirt', 27), productImage('FC Barcelona football shirt', 28)] },
+  { name: 'Manchester United', category: 'Football Jerseys', subcategory: 'International', colors: ['Red', 'White Away'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('manchester united football jersey shirt', 29), productImage('Man United football shirt', 30)] },
+  { name: 'Liverpool', category: 'Football Jerseys', subcategory: 'International', colors: ['Home Red', 'Away Green'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('liverpool football jersey shirt', 31), productImage('Liverpool FC football shirt', 32)] },
+  { name: 'PSG', category: 'Football Jerseys', subcategory: 'International', colors: ['Navy', 'White'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('psg football jersey shirt', 33), productImage('Paris Saint Germain football shirt', 34)] },
+  { name: 'Mamelodi Sundowns', category: 'Football Jerseys', subcategory: 'PSL', colors: ['Yellow', 'Blue Away'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('mamelodi sundowns football jersey shirt', 35), productImage('Sundowns football shirt', 36)] },
+  { name: 'Kaizer Chiefs', category: 'Football Jerseys', subcategory: 'PSL', colors: ['Gold/Black', 'Black Away'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('kaizer chiefs football jersey shirt', 37), productImage('Kaizer Chiefs football shirt', 38)] },
+  { name: 'Orlando Pirates', category: 'Football Jerseys', subcategory: 'PSL', colors: ['Black/White', 'White Away'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('orlando pirates football jersey shirt', 39), productImage('Orlando Pirates football shirt', 40)] },
+  { name: 'Moroka Swallows', category: 'Football Jerseys', subcategory: 'PSL', colors: ['Black', 'White'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('moroka swallows football jersey shirt', 41), productImage('Swallows football shirt', 42)] },
+
+  { name: 'Casual Leather Watch', category: 'Watches', colors: ['Brown', 'Black', 'Tan'], sizes: ['One Size'], images: [productImage('casual leather wrist watch', 43), productImage('brown leather watch', 44)] },
+  { name: 'Stainless Steel Watch', category: 'Watches', colors: ['Silver', 'Gold', 'Gunmetal'], sizes: ['One Size'], images: [productImage('stainless steel wrist watch', 45), productImage('luxury metal watch', 46)] },
+
+  { name: 'Diesel Wallet', category: 'Wallets', colors: ['Black', 'Brown'], sizes: ['One Size'], images: [productImage('diesel leather wallet', 47), productImage('leather wallet black', 48)] },
+  { name: 'Lacoste Wallet', category: 'Wallets', colors: ['Black', 'Navy'], sizes: ['One Size'], images: [productImage('lacoste leather wallet', 49), productImage('premium wallet navy', 50)] },
+
+  { name: 'Sneaker + T-Shirt', category: 'Combos', colors: ['Black/White Mix', 'Earth Tones'], sizes: ['S', 'M', 'L', 'XL', 'XXL'], images: [productImage('sneaker t shirt combo outfit', 51), productImage('streetwear sneaker outfit', 52)] },
+  { name: 'Watch + Wallet', category: 'Combos', colors: ['Classic Black', 'Brown Luxury'], sizes: ['One Size'], images: [productImage('watch wallet combo accessories', 53), productImage('men accessories watch wallet', 54)] }
 ];
 
-const grid = document.getElementById('product-grid');
-const hero = document.getElementById('hero-sequence');
+const productSections = document.getElementById('product-sections');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.getElementById('navLinks');
 
-function setHeroSequence() {
-  let index = 0;
-  hero.style.backgroundImage = `url('${heroFrames[0]}')`;
-  setInterval(() => {
-    index = (index + 1) % heroFrames.length;
-    hero.style.backgroundImage = `url('${heroFrames[index]}')`;
-  }, 3200);
-}
+menuToggle.addEventListener('click', () => {
+  const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', String(!expanded));
+  navLinks.classList.toggle('show');
+});
 
-function buildProductCard(product, idx) {
-  const reflector = product.name.toLowerCase().includes('reflector') ? 'reflector-glow border-slate-300/50' : '';
-
-  return `
-    <article class="rounded-2xl border border-gold/30 bg-panel p-4">
-      <div class="flip-card">
-        <div class="flip-card-inner relative h-64 w-full">
-          <div class="flip-face overflow-hidden rounded-xl border border-white/10">
-            <img class="h-full w-full object-cover" src="${product.itemImage}" alt="${product.name} item image" loading="lazy" />
-          </div>
-          <div class="flip-face flip-back overflow-hidden rounded-xl border border-gold/30 ${reflector}">
-            <img class="h-full w-full object-cover" src="${product.styledImage}" alt="${product.name} styled on model" loading="lazy" />
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-4">
-        <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-gold">${product.department}</p>
-        <h3 class="mt-1 text-lg font-extrabold">${product.name}</h3>
-        <p class="mt-1 text-sm text-white/70">${product.price}</p>
-
-        <div class="mt-4 grid gap-3 sm:grid-cols-2">
-          <label class="text-xs font-semibold uppercase tracking-[0.14em] text-white/75">
-            UK Size
-            <select data-size-${idx} class="mt-1 w-full rounded-lg border border-gold/35 bg-black px-3 py-2 text-sm text-white outline-none focus:border-gold">
-              ${product.sizes.map((size) => `<option value="${size}">${size}</option>`).join('')}
-            </select>
-          </label>
-
-          <label class="text-xs font-semibold uppercase tracking-[0.14em] text-white/75">
-            Colorway
-            <select data-color-${idx} class="mt-1 w-full rounded-lg border border-gold/35 bg-black px-3 py-2 text-sm text-white outline-none focus:border-gold">
-              ${product.colors.map((color) => `<option value="${color}">${color}</option>`).join('')}
-            </select>
-          </label>
-        </div>
-
-        <button data-order="${idx}" class="mt-4 w-full rounded-lg bg-gold px-4 py-3 text-xs font-black uppercase tracking-[0.15em] text-black transition hover:shadow-glow hover:brightness-110">
-          Order on WhatsApp
-        </button>
-      </div>
-    </article>
-  `;
-}
+navLinks.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('show');
+  });
+});
 
 function renderProducts() {
-  grid.innerHTML = products.map((product, idx) => buildProductCard(product, idx)).join('');
+  categoryOrder.forEach((category) => {
+    const section = document.createElement('section');
+    section.className = 'category-block';
+    section.id = sectionIds[category];
 
-  document.querySelectorAll('[data-order]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const index = Number(button.getAttribute('data-order'));
-      const item = products[index];
-      const size = document.querySelector(`[data-size-${index}]`).value;
-      const color = document.querySelector(`[data-color-${index}]`).value;
+    const heading = document.createElement('h3');
+    heading.className = 'category-title';
+    heading.textContent = category;
 
-      const message = `What's up Drip Boy! I need to secure the ${item.name} in ${color}, Size ${size}. Is it available for delivery?`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank', 'noopener,noreferrer');
+    const grid = document.createElement('div');
+    grid.className = 'product-grid';
+
+    products.filter((product) => product.category === category).forEach((product) => {
+      const card = document.createElement('article');
+      card.className = 'card';
+      const safeId = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+      card.innerHTML = `
+        <div class="image-wrap"><img src="${product.images[0]}" alt="${product.name}" id="main-${safeId}" loading="lazy" /></div>
+        <div class="thumb-row">${product.images.map((img, idx) => `<button class="thumb ${idx === 0 ? 'active' : ''}" type="button" data-main="main-${safeId}" data-img="${img}" aria-label="${product.name} image ${idx + 1}"><img src="${img}" alt="${product.name} thumbnail ${idx + 1}" loading="lazy" /></button>`).join('')}</div>
+        <h4>${product.name}</h4>
+        <p class="meta">Category: ${product.category}${product.subcategory ? ` • ${product.subcategory}` : ''}</p>
+        <label>Color<select class="color-select">${product.colors.map((color) => `<option value="${color}">${color}</option>`).join('')}</select></label>
+        <label>Size<select class="size-select">${product.sizes.map((size) => `<option value="${size}">${size}</option>`).join('')}</select></label>
+        <button class="order-btn" type="button">Order on WhatsApp</button>
+      `;
+
+      card.querySelector('.order-btn').addEventListener('click', () => {
+        const color = card.querySelector('.color-select').value;
+        const size = card.querySelector('.size-select').value;
+        const message = [
+          'Hi DRIPBOY SHOP, I would like to order:',
+          `Product Name: ${product.name}`,
+          `Category: ${product.category}${product.subcategory ? ` (${product.subcategory})` : ''}`,
+          `Color: ${color}`,
+          `Size: ${size}`
+        ].join('\n');
+
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+      });
+
+      grid.appendChild(card);
+    });
+
+    section.append(heading, grid);
+    productSections.appendChild(section);
+  });
+
+  document.querySelectorAll('.thumb').forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      const mainImage = document.getElementById(thumb.dataset.main);
+      mainImage.src = thumb.dataset.img;
+      thumb.parentElement.querySelectorAll('.thumb').forEach((item) => item.classList.remove('active'));
+      thumb.classList.add('active');
     });
   });
 }
 
-setHeroSequence();
 renderProducts();
