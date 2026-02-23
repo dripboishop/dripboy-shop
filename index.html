@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DRIPBOY SHOP premium streetwear store for sneakers, apparel, football jerseys, watches, wallets, and curated combos."
+      content="DripBoy Shop is a premium South African streetwear store for sneakers, apparel, fan jerseys, headwear, and accessories."
     />
-    <title>DRIPBOY SHOP | Luxury Streetwear</title>
+    <title>DripBoy Shop | Own Your Drip</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,77 +17,193 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header" id="home">
-      <nav class="container navbar">
-        <a href="#home" class="brand" aria-label="DripBoy Shop home">
-          <span class="brand-text">DripBoy Shop</span>
-        </a>
+    <div class="announcement-bar">🚚 FREE SHIPPING NATIONWIDE – No Hidden Fees</div>
 
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+    <header class="site-header" id="home">
+      <nav class="navbar container">
+        <a class="logo" href="#home">DRIPBOY SHOP</a>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
           <span></span><span></span><span></span>
         </button>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#winter-drip">Winter Drip</a></li>
-          <li><a href="#international-fan-zone">International Fan Zone</a></li>
-          <li><a href="#psl-heritage">PSL Heritage</a></li>
-          <li><a href="#footwear-heat">Footwear Heat</a></li>
-          <li><a href="#the-vault">The Vault</a></li>
-          <li><a href="#kids-extreme-drip">Kids Extreme Drip</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-area" id="primary-menu">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li class="shop-dropdown">
+              <button class="shop-toggle" aria-expanded="false">Shop ▾</button>
+              <ul class="dropdown-menu">
+                <li><a href="#footwear">Footwear</a></li>
+                <li><a href="#fan-zone">Fan Zone</a></li>
+                <li><a href="#apparel">Apparel</a></li>
+                <li><a href="#headwear">Headwear</a></li>
+                <li><a href="#accessories">Accessories &amp; Bags</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#why-shop">Why Shop With Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-tools">
+            <label class="search-wrap" for="searchInput">
+              <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products" />
+            </label>
+            <a class="wa-icon" href="https://wa.me/27696643402" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">
+              <span>🟢</span>
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" aria-label="Streetwear hero slideshow">
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <h1>STEP INTO REAL DRIP</h1>
-          <p>Premium Sneakers • Jerseys • Streetwear • Accessories</p>
-          <a href="#winter-drip" class="btn btn-gold">SHOP NOW</a>
+        <div class="hero-content container">
+          <p class="hero-kicker">DripBoy Shop</p>
+          <h1>OWN YOUR DRIP.</h1>
+          <p>Streetwear that matches your lifestyle.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#shop">Shop Now</a>
+            <a class="btn btn-outline" href="https://wa.me/27696643402" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
         </div>
       </section>
 
-      <section class="section-head container">
-        <h2>Premium Collections</h2>
+      <section class="section-intro container" id="shop">
+        <h2>Shop Categories</h2>
+        <p>Browse curated streetwear essentials. Select your color and size, then order directly on WhatsApp.</p>
+      </section>
+
+      <section class="category-section container" id="footwear">
+        <h2>Footwear</h2>
+        <div class="subcategory-block">
+          <h3>Sneakers</h3>
+          <div class="product-grid">
+            <article class="product-card" data-name="street flex sneaker">
+              <div class="product-image">Sneakers Image</div>
+              <h4 class="product-name">Street Flex Sneaker</h4>
+              <p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p>
+              <span class="shipping-badge">FREE SHIPPING</span>
+              <label>Select Color
+                <select class="color-select">
+                  <option value="">Select Color</option><option>Red</option><option>Black</option><option>White</option><option>Blue</option><option>Green</option>
+                </select>
+              </label>
+              <label>Select Size
+                <select class="size-select">
+                  <option value="">Select Size</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+              </label>
+              <button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button>
+            </article>
+            <article class="product-card" data-name="urban run sneaker">
+              <div class="product-image">Sneakers Image</div>
+              <h4 class="product-name">Urban Run Sneaker</h4>
+              <p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p>
+              <span class="shipping-badge">FREE SHIPPING</span>
+              <label>Select Color
+                <select class="color-select"><option value="">Select Color</option><option>Black</option><option>White</option><option>Blue</option></select>
+              </label>
+              <label>Select Size
+                <select class="size-select"><option value="">Select Size</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+              </label>
+              <button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="subcategory-block">
+          <h3>Socks</h3>
+          <div class="product-grid">
+            <article class="product-card" data-name="drip crew socks">
+              <div class="product-image">Socks Image</div>
+              <h4 class="product-name">Drip Crew Socks</h4>
+              <p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p>
+              <span class="shipping-badge">FREE SHIPPING</span>
+              <label>Select Color
+                <select class="color-select"><option value="">Select Color</option><option>Black</option><option>White</option><option>Red</option></select>
+              </label>
+              <label>Select Size
+                <select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select>
+              </label>
+              <button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-section container" id="fan-zone">
+        <h2>Fan Zone</h2>
+        <div class="subcategory-block"><h3>PSL Jerseys</h3><div class="product-grid"><article class="product-card" data-name="psl pride jersey"><div class="product-image">PSL Jersey Image</div><h4 class="product-name">PSL Pride Jersey</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Green</option><option>Blue</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>International Football Jerseys</h3><div class="product-grid"><article class="product-card" data-name="global stars jersey"><div class="product-image">International Jersey Image</div><h4 class="product-name">Global Stars Jersey</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>White</option><option>Blue</option><option>Red</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Full Kits &amp; Tracksuits</h3><div class="product-grid"><article class="product-card" data-name="stadium tracksuit set"><div class="product-image">Tracksuit Image</div><h4 class="product-name">Stadium Tracksuit Set</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Blue</option><option>Green</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+      </section>
+
+      <section class="category-section container" id="apparel">
+        <h2>Apparel</h2>
+        <div class="subcategory-block"><h3>T-Shirts</h3><div class="product-grid"><article class="product-card" data-name="signature graphic tee"><div class="product-image">T-Shirt Image</div><h4 class="product-name">Signature Graphic Tee</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>White</option><option>Red</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Jackets</h3><div class="product-grid"><article class="product-card" data-name="midnight bomber jacket"><div class="product-image">Jacket Image</div><h4 class="product-name">Midnight Bomber Jacket</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Blue</option><option>Green</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Tracksuits</h3><div class="product-grid"><article class="product-card" data-name="velocity tracksuit"><div class="product-image">Tracksuit Image</div><h4 class="product-name">Velocity Tracksuit</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Gray</option><option>Blue</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Bottoms (Jeans &amp; Shorts)</h3><div class="product-grid"><article class="product-card" data-name="urban fit jeans"><div class="product-image">Jeans Image</div><h4 class="product-name">Urban Fit Jeans</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Blue</option><option>Black</option><option>White</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>28</option><option>30</option><option>32</option><option>34</option><option>36</option><option>38</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+      </section>
+
+      <section class="category-section container" id="headwear">
+        <h2>Headwear</h2>
+        <div class="subcategory-block"><h3>Caps</h3><div class="product-grid"><article class="product-card" data-name="dripboy snapback cap"><div class="product-image">Cap Image</div><h4 class="product-name">DripBoy Snapback Cap</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>White</option><option>Red</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Hats</h3><div class="product-grid"><article class="product-card" data-name="street bucket hat"><div class="product-image">Hat Image</div><h4 class="product-name">Street Bucket Hat</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Green</option><option>Blue</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+      </section>
+
+      <section class="category-section container" id="accessories">
+        <h2>Accessories &amp; Bags</h2>
+        <div class="subcategory-block"><h3>Side Bags</h3><div class="product-grid"><article class="product-card" data-name="cross city side bag"><div class="product-image">Side Bag Image</div><h4 class="product-name">Cross City Side Bag</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Blue</option><option>Green</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Travel Bags</h3><div class="product-grid"><article class="product-card" data-name="nomad travel bag"><div class="product-image">Travel Bag Image</div><h4 class="product-name">Nomad Travel Bag</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>White</option><option>Blue</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Watches</h3><div class="product-grid"><article class="product-card" data-name="night gold watch"><div class="product-image">Watch Image</div><h4 class="product-name">Night Gold Watch</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Gold</option><option>Black</option><option>Silver</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+        <div class="subcategory-block"><h3>Wallets</h3><div class="product-grid"><article class="product-card" data-name="urban leather wallet"><div class="product-image">Wallet Image</div><h4 class="product-name">Urban Leather Wallet</h4><p class="price-line">Price: <span class="price-field" contenteditable="true"></span></p><span class="shipping-badge">FREE SHIPPING</span><label>Select Color<select class="color-select"><option value="">Select Color</option><option>Black</option><option>Brown</option><option>Blue</option></select></label><label>Select Size<select class="size-select"><option value="">Select Size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></label><button class="btn btn-gold order-btn" type="button">Order on WhatsApp</button></article></div></div>
+      </section>
+
+      <section class="about container" id="about">
+        <h2>About DripBoy Shop</h2>
         <p>
-          Handpicked essentials for your full fit. Select image, color, size, and place your order directly on WhatsApp.
+          DripBoy Shop is an online streetwear store delivering the latest sneakers, apparel, and accessories inspired by global urban culture. We focus on bold style, premium quality, and affordable prices — bringing you the drip that matches your lifestyle. From iconic sneakers to statement outfits, we keep you stepping out with confidence. Fast responses. Reliable service. Real drip.
         </p>
       </section>
 
-      <div id="product-sections" class="container"></div>
+      <section class="why-shop container" id="why-shop">
+        <h2>Why Shop With DripBoy</h2>
+        <div class="why-grid">
+          <div class="why-card"><span>⭐</span><h3>Premium Quality</h3></div>
+          <div class="why-card"><span>💸</span><h3>Affordable Pricing</h3></div>
+          <div class="why-card"><span>💬</span><h3>Fast WhatsApp Support</h3></div>
+          <div class="why-card"><span>🛡️</span><h3>Reliable Service</h3></div>
+          <div class="why-card"><span>🔥</span><h3>Urban Street Style Guaranteed</h3></div>
+          <div class="why-card"><span>🚚</span><h3>Free Nationwide Shipping</h3></div>
+        </div>
+      </section>
 
-      <section id="contact" class="contact">
-        <div class="container contact-grid">
+      <section class="contact container" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
           <div>
-            <h2>Contact DRIPBOY SHOP</h2>
-            <p>Need help with sizing, stock, or bundle deals? Chat with us instantly.</p>
-            <div class="contact-actions">
-              <a href="https://wa.me/27696643402" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
-                WhatsApp Us
-              </a>
-              <a href="https://wa.me/c/27696643402" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                View WhatsApp Catalog
-              </a>
-            </div>
+            <p><strong>WhatsApp:</strong> +27 69 664 3402</p>
+            <p><strong>Email:</strong> dripboy.clothing@gmail.com</p>
+            <p><strong>Location:</strong> South Africa</p>
+            <p><strong>Card Payments:</strong> Coming Soon</p>
           </div>
-          <div class="contact-card">
-            <h3>Business Hours</h3>
-            <p>Monday - Friday: 09:00 - 18:00</p>
-            <p>Saturday: 09:00 - 15:00</p>
-            <p>Sunday: Closed</p>
-            <p class="soon">Card payments coming soon.</p>
-          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button class="btn btn-gold" type="button">Send Message</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 DripBoy Shop</p>
-      </div>
+      <p>© 2026 DripBoy Shop. All Rights Reserved.</p>
+      <p>Free Nationwide Shipping | Card Payments Coming Soon</p>
     </footer>
 
     <script src="script.js"></script>
